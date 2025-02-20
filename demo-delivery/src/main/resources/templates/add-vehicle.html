@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Vehicle</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">  </link> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+    <h1>Add Vehicle</h1>
+
+    <section class="add-vehicle-form">
+        <form th:action="@{/vehicles}" method="post" th:object="${vehicle}">
+            <div class="form-group">
+                <label for="name">Vehicle Name:</label>
+                <input type="text" id="name" name="name" th:field="*{name}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fuelCapacity">Fuel Capacity:</label>
+                <input type="number" id="fuelCapacity" name="fuelCapacity" th:field="*{fuelCapacity}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plateNumber">Plate Number:</label>
+                <input type="text" id="plateNumber" name="plateNumber" th:field="*{plateNumber}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <input type="text" id="status" name="status" th:field="*{status}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <input type="text" id="type" name="type" th:field="*{type}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="vehicleWeight">Vehicle Weight:</label>
+                <input type="number" id="vehicleWeight" name="vehicleWeight" th:field="*{vehicleWeight}" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Vehicle</button>
+        </form>
+        <button onclick="location.href='/'" class="btn btn-secondary">Back to Home</button>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Swift Delivery. We are dedicated to creating a wonderful experience for you to deliver your packages.</p>
+    </div>
+</footer>
+
+</body>
+</html>

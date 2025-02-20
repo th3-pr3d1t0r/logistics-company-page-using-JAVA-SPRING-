@@ -1,0 +1,583 @@
+/* Basic Styling */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333; /* Dark gray for text */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #007bff; /* Blue for headings */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('@{/images/map.png.jpeg}');
+     /* Replace with your hero image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* Customer Reviews */
+.reviews {
+    margin-top: 40px;
+}
+
+.review {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.review p {
+    margin-bottom: 10px;
+}
+
+.review .author {
+    font-style: italic;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa; /* Light gray background */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+    }
+}
+
+/* Navbar styles (move from fragments.html if they are there) */
+nav {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 0; /* Add some padding */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make list items horizontal */
+    justify-content: center; /* Center the links */
+}
+
+nav li {
+    margin: 0 15px; /* Add spacing between list items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #007bff; /* Blue link color */
+    font-weight: bold; /* Make links bold */
+    padding: 8px 12px;  /* Add some padding around the links */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+nav a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Responsive Navbar (Example - Adjust breakpoint as needed) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack links vertically on smaller screens */
+        text-align: center; /* Center text */
+    }
+
+    nav li {
+        margin: 10px 0; /* Adjust margin for stacked links */
+    }
+}
+/* ... (All your previous CSS from style.css) ... */
+
+/* About Page Specific Styles */
+
+.company-history {
+    margin-top: 40px;
+    margin-bottom:40px;
+}
+
+.history-image {
+    max-width: 400px; /* Set a maximum width for uniform size */
+    height: auto; /* Maintain aspect ratio */
+    float: left;
+    margin: 0 20px 20px 0; /* Add margin around the image */
+    border: 1px solid #ddd; /* Optional: Add a border */
+}
+
+.company-values {
+    margin-top: 40px;
+    text-align: center; /* Center the entire section */
+    display: block;
+    margin
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+    gap: 20px;
+    justify-content: center; /* Center the grid items horizontally */
+}
+
+.value {
+    text-align: center; /* Center content within each grid item */
+}
+
+.value i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+
+/* ... (our-team styles) */
+.our-team {
+    margin-top: 40px;
+    text-align: center; /* Center the entire section */
+}
+
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member-image {
+    max-width: 150px; /* Reduced image size */
+    height: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .history-image {
+        max-width: 100%; /* Make image full width on smaller screens */
+        float: none; /* Remove float */
+        margin: 0 0 20px 0; /* Adjust margin */
+    }
+}
+/* ... (All your previous CSS from style.css) ... */
+
+/* Services Page Specific Styles */
+
+.service-intro {
+    margin-bottom: 20px;
+}
+
+.vehicle-table {
+    margin-top: 40px;
+}
+
+#vehicleTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#vehicleTable th, #vehicleTable td {
+    font-weight: bold;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#vehicleTable th {
+    background-color: #f8f9fa; /* Light gray for header */
+    font-weight: bold;
+}
+
+#vehicleTable tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.customer-feedback {
+    margin-top: 40px;
+}
+
+#feedback-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button, /* Style <button> elements */
+.btn { /* Style elements with the class "btn" */
+    display: inline-block; /* Makes the button behave like an inline element but allows setting width/height */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; /* Remove underlines from links if used as buttons */
+    cursor: pointer; /* Show pointer cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover,
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Add specific styles for different button types */
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* ... more button styles as needed ... */
+#vehicleTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Add margin below the table */
+}
+
+/* ... rest of your CSS ... */
+
+/* ... (All your previous CSS from style.css) ... */
+
+/* Add Vehicle Page Specific Styles */
+
+.add-vehicle-form {
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels stack on top of inputs */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Style buttons (if not already styled in your general CSS) */
+button,
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+ .btn-primary { /* Your "Save Vehicle" button */
+     background-color: #007bff;
+     color: white;
+ }
+
+ .btn-secondary { /* Your "Back to Home" button */
+     background-color: #6c757d;
+     color: white;
+     margin-top: 20px
+ }
+
+
+ /* ... (All your previous CSS from style.css) ... */
+
+ /* Vehicle Details Page Specific Styles */
+
+ .items-table {
+     margin-top: 40px;
+ }
+
+ #itemsTable {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 20px;
+ }
+
+ #itemsTable th, #itemsTable td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+
+ #itemsTable th {
+     background-color: #f8f9fa;
+     font-weight: bold;
+ }
+
+ #itemsTable tr:nth-child(even) {
+     background-color: #f2f2f2;
+ }
+
+ .add-item-form {
+     margin-top: 40px;
+ }
+
+ .form-group {
+     margin-bottom: 15px;
+ }
+
+ .form-group label {
+     display: block;
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+ .form-group input[type="text"],
+ .form-group input[type="number"] {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
+
+ /* Button styles (if not already defined in your general CSS) */
+ button, .btn { /* ... (your button styles) ... */ }
+ .btn-primary { /* ... (your btn-primary styles) ... */ }
+
+ /* style.css */
+
+ body {
+     font-family: sans-serif; /* Consistent font */
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4; /* Light background */
+     color: #333; /* Dark text for contrast */
+ }
+
+ .container {
+     width: 80%; /* Adjust as needed */
+     margin: 20px auto;
+     padding: 20px;
+     background-color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     border-radius: 5px;
+ }
+
+ h1, h2 {
+     color: #007bff; /* Primary color for headings */
+ }
+
+ /* Navbar styles (consistent with other pages) */
+ nav {
+     background-color: #007bff; /* Primary color */
+     color: #fff;
+     padding: 10px 0;
+ }
+
+ nav .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ nav a {
+     color: #fff;
+     text-decoration: none;
+     margin: 0 15px;
+     padding: 5px 10px; /* Add padding to the nav links */
+     border-radius: 5px; /* Add rounded corners to the nav links */
+     transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+ }
+
+ nav a:hover {
+     background-color: rgba(255, 255, 255, 0.2); /* Add a hover effect */
+ }
+
+ /* Table styles (consistent with other pages) */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 20px;
+ }
+
+ th, td {
+     padding: 10px;
+     border: 1px solid #ddd;
+     text-align: left;
+ }
+
+ th {
+     background-color: #007bff; /* Primary color for table headers */
+     ;
+ }
+
+ /* Form styles */
+ .form-group {
+     margin-bottom: 15px;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ input[type="text"],
+ input[type="number"] {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
+
+ /* Button styles */
+ .btn {
+     padding: 10px 15px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .btn-primary {
+     background-color: #007bff; /* Primary color */
+     color: #fff;
+ }
+
+ .btn-primary:hover {
+     background-color: #0056b3; /* Darker shade on hover */
+ }
+
+ .btn-secondary {
+     background-color: #6c757d; /* Gray color */
+     color: #fff;
+ }
+
+ .btn-secondary:hover {
+     background-color: #5a6268; /* Darker shade on hover */
+ }
+
+ /* Alert styles */
+ .alert {
+     padding: 10px;
+     margin-bottom: 15px;
+     border-radius: 5px;
+ }
+
+ .alert-danger {
+     background-color: #f8d7da; /* Light red */
+     color: #842029; /* Darker red text */
+     border: 1px solid #f5c6cb;
+ }
+
+ /* Item Table Styles */
+ .items-table {
+     margin-bottom: 20px; /* Add some spacing below the table */
+ }
+
+ .items-table p {
+     font-style: italic;
+     color: #777;
+ }
+
+ /* Add Item Form Styles */
+ .add-item-form {
+     border-top: 1px solid #ddd;
+     padding-top: 20px;
+ }

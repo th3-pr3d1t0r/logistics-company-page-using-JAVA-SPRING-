@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">  </link> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to Swift Delivery</h1>
+        <p>Your trusted partner for fast and reliable package delivery.</p>
+        <a href="#" class="btn">Get a Quote</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="feature">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>Fast Delivery</h3>
+            <p>We ensure your packages reach their destination quickly and efficiently.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Wide Coverage</h3>
+            <p>Delivering to your doorstep and beyond. We cover a wide range of locations.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-lock"></i>
+            <h3>Secure & Reliable</h3>
+            <p>Your packages are safe with us. We provide secure and reliable delivery services.</p>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="container">
+        <h2>What Our Customers Say</h2>
+
+        <div class="review">
+            <p>"Swift Delivery has been a game-changer for my business. Their service is incredibly fast and reliable."</p>
+            <p class="author">- John Doe, Business Owner</p>
+        </div>
+
+        <div class="review">
+            <p>"I've used several delivery services, and Swift Delivery is by far the best. Their customer service is exceptional."</p>
+            <p class="author">- Jane Smith, Online Seller</p>
+        </div>
+
+        <div class="review">
+            <p>"I was impressed by the speed and professionalism of Swift Delivery. They handled my package with great care."</p>
+            <p class="author">- David Lee, Individual Customer</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Swift Delivery. We are dedicated to creating a wonderful experience for you to deliver your packages.</p>
+    </div>
+</footer>
+
+</body>
+</html>

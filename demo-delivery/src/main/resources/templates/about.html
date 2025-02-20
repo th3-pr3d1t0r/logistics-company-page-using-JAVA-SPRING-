@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+    <h1>About Us</h1>
+
+    <section class="company-history">
+        <h2>Our History</h2>
+        <img th:src="@{/images/company-history.jpeg}" alt="Company History" class="history-image">  </link>
+        <p>Swift Delivery was founded in 2010 with a simple mission: to provide fast, reliable, and affordable delivery services.  We started as a small, local delivery service and have grown to serve a wide region.  Our commitment to customer satisfaction and our innovative approach to logistics have been key to our success.  We're proud of our history and excited about the future.</p>
+        <p>Over the years, we've invested in technology to streamline our operations and provide real-time tracking and updates to our customers.  We've also built a strong team of dedicated professionals who are passionate about delivering excellence.  We believe that our people are our greatest asset.</p>
+    </section>
+
+    <section class="company-values">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Speed</h3>
+                <p>We prioritize speed and efficiency in all our deliveries.</p>
+            </div>
+            <div class="value">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Reliability</h3>
+                <p>You can count on us to deliver your packages on time, every time.</p>
+            </div>
+            <div class="value">
+                <i class="fas fa-lock"></i>
+                <h3>Security</h3>
+                <p>We ensure the safety and security of your packages during transit.</p>
+            </div>
+            <div class="value">
+                <i class="fas fa-user-friends"></i>
+                <h3>Customer Focus</h3>
+                <p>We're dedicated to providing exceptional customer service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img th:src="@{/images/team member 1.jpeg}" alt="Team Member 1" class="team-member-image">  </link>
+                <h3>John Doe</h3>
+                <p>CEO</p>
+            </div>
+            <div class="team-member">
+                <img th:src="@{/images/team member 2.jpeg}" alt="Team Member 2" class="team-member-image">  </link>
+                <h3>Jane Smith</h3>
+                <p>Head of Logistics</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Swift Delivery. We are dedicated to creating a wonderful experience for you to deliver your packages.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Services</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+    <h1>Our Services</h1>
+
+    <section class="service-intro">
+        <p>We offer a diverse fleet of vehicles to meet all your delivery needs. From small packages to large cargo, we have the right vehicle for the job. Browse our available vehicles below and hire one today!</p>
+    </section>
+
+    <section class="vehicle-table">
+        <h2>Hire a Vehicle Today</h2>
+        <table id="vehicleTable">
+            <thead>
+            <tr>
+                <th>Vehicle Name</th>
+                <th>Fuel Capacity</th>
+                <th>Plate Number</th>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Vehicle Weight</th>
+                <th>Weight Remaining</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="vehicle : ${vehicles}">
+                <td th:text="${vehicle.name}"></td>
+                <td th:text="${vehicle.fuelCapacity}"></td>
+                <td th:text="${vehicle.plateNumber}"></td>
+                <td th:text="${vehicle.status}"></td>
+                <td th:text="${vehicle.type}"></td>
+                <td th:text="${vehicle.vehicleWeight}"></td>
+                <td th:text="${vehicle.remainingWeight}"></td> <td><button th:onclick="'addItem(' + ${vehicle.id} + ')'">Add Item</button></td>
+            </tr>
+            </tbody>
+        </table>
+        <button onclick="location.href='/vehicles/new'">Create New Vehicle</button>
+    </section>
+
+    <section class="customer-feedback">
+        <h2>Customer Feedback</h2>
+        <div id="feedback-container">
+            <p>No feedback available yet.</p>
+        </div>
+        <form id="feedback-form">
+            <h3>Leave Feedback</h3>
+            <textarea id="feedback-text" placeholder="Your feedback here..."></textarea><br>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Swift Delivery. We are dedicated to creating a wonderful experience for you to deliver your packages.</p>
+    </div>
+</footer>
+
+<script th:inline="javascript">
+    function addItem(vehicleId) {
+        window.location.href = `/vehicles/${vehicleId}/details`;
+    }
+</script>
+
+</body>
+</html>
